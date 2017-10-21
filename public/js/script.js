@@ -44,6 +44,10 @@ function synthVoice(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
+  utterance.rate = 1;
+  utterance.lang = 'en-GB';
+  utterance.voice = voices[3];
+  utterance.voiceURI = 'Google UK English Female';
   synth.speak(utterance);
 }
 
